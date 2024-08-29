@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "astolfoforge",
+  "version": "1.4",
+  "name": "Astolfo Forge Mod",
+  "description": "",
+  "authors": ["mldkyt"],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "assets/astolfofabric/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.mldkyt.astolfofabric.client.AstolfoFabricClient"
+    ],
+    "main": [
+      "me.mldkyt.astolfofabric.AstolfoFabric"
+    ]
+  },
+  "mixins": [
+    "astolfofabric.mixins.json",
+    {
+      "config": "astolfofabric.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
