@@ -17,6 +17,7 @@
 
 package me.mldkyt.astolfofabric.entities;
 
+import me.mldkyt.astolfofabric.AstolfoFabricEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
@@ -25,15 +26,8 @@ import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 
-public class ShiotaNagisaEntity extends PathAwareEntity {
+public class ShiotaNagisaEntity extends AstolfoFabricEntity {
     public ShiotaNagisaEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
-    }
-
-    @Override
-    protected void initGoals() {
-        this.goalSelector.add(1, new WanderAroundGoal(this, 0.35f));
-        this.goalSelector.add(2, new LookAroundGoal(this));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
     }
 }

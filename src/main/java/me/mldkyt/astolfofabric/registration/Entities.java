@@ -71,7 +71,7 @@ public class Entities {
 
     public static final EntityType<BridgetEntity> BRIDGET = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of("astolfofabric", "boykisser"),
+            Identifier.of("astolfofabric", "bridget"),
             EntityType.Builder.create(BridgetEntity::new, SpawnGroup.CREATURE)
                     .dimensions(0.6f, 1.8f) // 幅0.6m、高さ1.8m, プレイヤーのサイズ
                     .build()
