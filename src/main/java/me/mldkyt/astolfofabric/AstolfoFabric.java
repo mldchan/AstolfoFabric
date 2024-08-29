@@ -119,10 +119,12 @@ public class AstolfoFabric implements ModInitializer {
             try {
                 @SuppressWarnings("unchecked")
                 EntityType<? extends AstolfoFabricEntity> type = (EntityType<? extends AstolfoFabricEntity>) entity.getType();
-                AstolfoFabricEntity newEntity = new AstolfoFabricEntity(type, p.getWorld());
-                newEntity.copyPositionAndRotation(entity);
-                p.getWorld().spawnEntity(newEntity);
-                duplicated++;
+                for (int i = 0; i < amount - 1; i++) {
+                    AstolfoFabricEntity newEntity = new AstolfoFabricEntity(type, p.getWorld());
+                    newEntity.copyPositionAndRotation(entity);
+                    p.getWorld().spawnEntity(newEntity);
+                    duplicated++;
+                }
             } catch (ClassCastException e) {
                 // Handle the exception, e.g., log it or notify the user
                 System.err.println("Failed to cast entity type: " + e.getMessage());
