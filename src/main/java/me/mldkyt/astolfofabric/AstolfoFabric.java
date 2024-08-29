@@ -71,6 +71,9 @@ public class AstolfoFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         // 属性を登録する
+
+        SpawnEggs.initEggs();
+
         FabricDefaultAttributeRegistry.register(Entities.ASTOLFO_ARMOR, AstolfoArmorEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(Entities.ASTOLFO_CASUAL, AstolfoCasualEntity.createMobAttributes());
         FabricDefaultAttributeRegistry.register(Entities.ASTOLFO_SCHOOLGIRL, AstolfoSchoolGirlEntity.createMobAttributes());

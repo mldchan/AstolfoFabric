@@ -24,6 +24,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class SpawnEggs {
+
+    public static void initEggs() {
+        //
+    }
+
     // アストルフォ鎧
 
     public static final Item ASTOLFO_ARMOR_SPAWN_EGG = Registry.register(
